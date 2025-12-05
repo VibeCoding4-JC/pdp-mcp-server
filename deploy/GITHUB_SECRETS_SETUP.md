@@ -5,7 +5,7 @@
 | Parameter | Value |
 |-----------|-------|
 | Host | `103.164.191.212` |
-| Port | `22193` |
+| Port | `61234` |
 | Username | `devjc` |
 | Auth | PPK file `devops01.ppk` |
 

@@ -14,7 +14,7 @@
 
 3. **SSH Connection Info**
    - Host: `103.164.191.212`
-   - Port: `22193`
+   - Port: `61234`
    - Username: `devjc`
    - Auth: PPK file `devops01.ppk`
 
@@ -22,7 +22,7 @@
    - `SSH_HOST` - `103.164.191.212`
    - `SSH_USERNAME` - `devjc`
    - `SSH_PRIVATE_KEY` - Convert dari `devops01.ppk` ke OpenSSH format
-   - `SSH_PORT` - `22193`
+   - `SSH_PORT` - `61234`
    - `DEPLOY_PATH` - Path deployment (e.g., `/opt/pdp-mcp-server`)
    - `PINECONE_API_KEY` - API key Pinecone
    - `GEMINI_API_KEY` - API key Gemini
