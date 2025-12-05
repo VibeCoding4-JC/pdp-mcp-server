@@ -1,0 +1,36 @@
+[Unit]
+Description=PDP MCP Server - UU Perlindungan Data Pribadi Assistant
+Documentation=https://github.com/your-repo/pdp-mcp-server
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/pdp-mcp-server
+Environment=PATH=/opt/pdp-mcp-server/venv/bin:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=/opt/pdp-mcp-server/.env
+
+# Main process
+ExecStart=/opt/pdp-mcp-server/venv/bin/python -m src.server
+
+# Restart policy
+Restart=always
+RestartSec=10
+StartLimitInterval=60
+StartLimitBurst=3
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=pdp-mcp-server
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/pdp-mcp-server
+
+[Install]
+WantedBy=multi-user.target
